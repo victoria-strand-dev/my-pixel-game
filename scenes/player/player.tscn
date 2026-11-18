@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cocya51hg156t"]
+
+[ext_resource type="Texture2D" uid="uid://ncjwycb13ag5" path="res://assets/characters/player_idle_front-8.png.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://djjfuvymuxbx8" path="res://scenes/player/player.gd" id="1_dovo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn8o0"]
+size = Vector2(28, 32)
+
+[node name="Player" type="CharacterBody2D" unique_id=1065810534]
+script = ExtResource("1_dovo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=760778140]
+texture_filter = 1
+texture = ExtResource("1_8afob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=676639382]
+shape = SubResource("RectangleShape2D_dn8o0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=629612172]
+zoom = Vector2(3, 3)

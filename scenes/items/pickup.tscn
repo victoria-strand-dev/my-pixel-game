@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bs5abukoebrx6"]
+
+[ext_resource type="Texture2D" uid="uid://bqbjmm1l7ay32" path="res://assets/items/drink.png.png" id="1_kacfq"]
+[ext_resource type="Script" uid="uid://dm428hiwkvp4o" path="res://scenes/items/pickup.gd" id="1_yllof"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_accio"]
+radius = 33.01515
+
+[node name="Pickup" type="Area2D" unique_id=1236456014]
+script = ExtResource("1_yllof")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1370143851]
+texture_filter = 1
+texture = ExtResource("1_kacfq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=995079767]
+shape = SubResource("CircleShape2D_accio")
